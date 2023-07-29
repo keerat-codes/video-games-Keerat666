@@ -8,6 +8,8 @@ require('dotenv').config();
 
 const goty  = require('./controllers/goty');
 const mario  = require('./controllers/mario');
+const contra  = require('./controllers/contra');
+app.use('/controller', contra);
 app.use('/mario', mario);
 app.use('/goty', goty);
 app.use(cors())
