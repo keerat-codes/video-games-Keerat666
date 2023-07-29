@@ -6,6 +6,8 @@ const PORT = 8009;
 
 require('dotenv').config();
 
+const goty  = require('./controllers/goty');
+app.use('/goty', goty);
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
