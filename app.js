@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const gamesModelRoute = require('./routes/gamesModel');
+app.use('/gamesModel', gamesModelRoute);
 
 const conn = require('./middlewares/connection');
 console.log("Trying to establish a connection to TiDB...");
