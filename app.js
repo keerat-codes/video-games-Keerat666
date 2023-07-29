@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const goty  = require('./controllers/goty');
+const mario  = require('./controllers/mario');
+app.use('/mario', mario);
 app.use('/goty', goty);
 app.use(cors())
 app.use(express.json());
